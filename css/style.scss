@@ -16,3 +16,20 @@ $cblack: black;
         animetion-delay: 0.32s;
     }
 }
+
+@keyframes sk-bouncedelay{
+    0%{
+        transform: scale(0);
+    }
+    40%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0);
+    }
+    
+    
+}
