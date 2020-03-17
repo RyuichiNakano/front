@@ -11,33 +11,25 @@ $cblack: black;
         border-radius: 50%;
         animation: sk-bouncedelay 1.4s infinite;
         
-        @for
-        
-        &:ntn-child(1){
-            animation-delay: -0.32s;
+        @for $i from 1 through 2{
+             &:nth-child(#{$i}){
+            animation-delay: -0.32s / $i;
         }
-        
-        &:ntn-child(2){
-            animation-delay: -0.16s;
-        }
-        
+      }
     }
+}
 
-@keyframes sk-bouncedelay{
+ @keyframes sk-bouncedelay{
     0%{
         transform: scale(0);
     }
     40%{
         transform: scale(1);
     }
-    
     80%{
         transform: scale(0);
     }
     100%{
         transform: scale(0);
     }
-    //こちらの部分に変更を加えました。中野
-    
-    
 }
