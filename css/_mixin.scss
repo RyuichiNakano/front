@@ -1,4 +1,4 @@
-@mixin animation(
+@mixin ani(//変数であり関数？
   $name,
   $duration: 1s,
   $timing-function: ease,
@@ -7,7 +7,7 @@
   $direction: normal,
   $fill-mode: forwards
 ) {
-  animation: {
+  animation: {//関数
     name: $name;
     duration: $duration;
     timing-function: $timing-function;

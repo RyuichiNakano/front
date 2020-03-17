@@ -1,88 +1,105 @@
-/*
-Error: Undefined mixin 'animation'.
-        on line 44 of style.scss, in `animation'
-        from line 44 of style.scss
+.three-dot-spinner {
+  text-align: center; }
+  .three-dot-spinner div {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    animation: sk-bouncedelay 1.4s infinite; }
+    .three-dot-spinner div:nth-child(1) {
+      animation-delay: -0.32s; }
+    .three-dot-spinner div:nth-child(2) {
+      animation-delay: -0.16s; }
 
-39:         width: 40px;
-40:         height: 40px;
-41:         background-color: #333;
-42:         margin: 100px auto;
-43:         
-44:         @include animation(
-45:         $name:sk-rotateplane2,
-46:         $duration: 1.2s,
-47:         $iteration-count: infinite
-48:     );
-49:     }
+@keyframes sk-bouncedelay {
+  0% {
+    transform: scale(0); }
+  40% {
+    transform: scale(1); }
+  80% {
+    transform: scale(0); }
+  100% {
+    transform: scale(0); } }
+.mobile-menu-icon {
+  background-color: transparent;
+  border: none;
+  outline: none !important;
+  cursor: pointer; }
+  .mobile-menu-icon > span {
+    background-color: black;
+    width: 35px;
+    height: 2px;
+    display: block;
+    margin-bottom: 9px;
+    transition: transform 0.4s; }
+    .mobile-menu-icon > span:last-child {
+      margin-bottom: 0; }
 
-Backtrace:
-style.scss:44:in `animation'
-style.scss:44
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:98:in `block in with_mixin'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:98:in `with_mixin'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:294:in `watch'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/plugin.rb:109:in `method_missing'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/exec/base.rb:52:in `parse'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/exec/base.rb:19:in `parse!'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/bin/sass:13:in `<top (required)>'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/bin/sass:23:in `load'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/bin/sass:23:in `<main>'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'animation'.\A         on line 44 of style.scss, in `animation'\A         from line 44 of style.scss\A \A 39:         width: 40px;\A 40:         height: 40px;\A 41:         background-color: #333;\A 42:         margin: 100px auto;\A 43:         \A 44:         @include animation(\A 45:         $name:sk-rotateplane2,\A 46:         $duration: 1.2s,\A 47:         $iteration-count: infinite\A 48:     );\A 49:     }"; }
+.menu-open {
+  background-color: black; }
+  .menu-open .mobile-menu-icon > span {
+    background-color: white; }
+    .menu-open .mobile-menu-icon > span:nth-child(1) {
+      transform: translateY(11px) rotate(135deg); }
+    .menu-open .mobile-menu-icon > span:nth-child(2) {
+      transform: translateX(-18px) scaleX(0); }
+    .menu-open .mobile-menu-icon > span:nth-child(3) {
+      transform: translateY(-11px) rotate(-135deg); }
+
+body {
+  margin: 0; }
+
+#container {
+  position: relative;
+  height: 100vh;
+  background-color: teal;
+  font-family: 'Shadows Into Light', cursive; }
+
+.animete-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  font-size: 2em; }
+  .animete-title.inview {
+    opacity: 1; }
+    .animete-title.inview .char {
+      display: inline-block;
+      animation-name: kf-animate-chars;
+      animation-duration: 0.5s;
+      animation-timing-function: cubic-bezier(0.39, 1, 57, 0.58, 1);
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: both; }
+      .animete-title.inview .char:nth-child(1) {
+        animation-delay: 0.04s; }
+      .animete-title.inview .char:nth-child(2) {
+        animation-delay: 0.08s; }
+      .animete-title.inview .char:nth-child(3) {
+        animation-delay: 0.12s; }
+      .animete-title.inview .char:nth-child(4) {
+        animation-delay: 0.16s; }
+      .animete-title.inview .char:nth-child(5) {
+        animation-delay: 0.2s; }
+      .animete-title.inview .char:nth-child(6) {
+        animation-delay: 0.24s; }
+      .animete-title.inview .char:nth-child(7) {
+        animation-delay: 0.28s; }
+      .animete-title.inview .char:nth-child(8) {
+        animation-delay: 0.32s; }
+      .animete-title.inview .char:nth-child(9) {
+        animation-delay: 0.36s; }
+
+@keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/*# sourceMappingURL=style.css.map */
